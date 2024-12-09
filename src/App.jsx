@@ -13,8 +13,8 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path="/chatbot" element={<Chatbot/>} />
-      <Route path="/login" element={<Login/>} />
-      <Route path="/" element={<Signup/>} />
+      <Route path="/" element={<Login/>} />
+      <Route path="/signup" element={<Signup/>} />
     </Routes>
     </BrowserRouter>
     </>
