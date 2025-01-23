@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -28,7 +28,6 @@ function Login() {
 
     if (user) {
       setError('');
-      alert('Login successful!');
       // Redirect to the chatbot page or perform any additional actions here
 
       // Create a session token for the user
@@ -40,12 +39,19 @@ function Login() {
       setError('Email or Password is incorrect');
     }
   };
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      window.location.href = '/chatbot';
+    }
+  }, [])
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black text-white">
       <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left side - Picture */}
-        <div className=" hidden md:block md:w-1/2 bg-cover bg-center" style={{ backgroundImage: 'url(https://www.cio.com/wp-content/uploads/2023/08/chatbot_ai_machine-learning_emerging-tech-100778305-orig.jpg?quality=50&strip=all)' }}>
+        <div className=" hidden md:block md:w-1/2 bg-cover bg-center" style={{ backgroundImage: `url('/chatbot.PNG')` }}>
           {/* Optional: Add overlay or any other styling as desired */}
         </div>
         

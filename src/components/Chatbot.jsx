@@ -110,9 +110,9 @@ function Chatbot() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-[calc(100vh-4rem)] bg-gray-100 overflow-hidden ">
       {/* Sidebar */}
-<div className="w-64 bg-gray-800 text-white p-4">
+<div className="w-64 bg-gray-800 text-white p-4 hidden md:block">
   <button
     onClick={handleNewChat}
     className="w-full mb-4 px-4 py-2 border border-gray-300 rounded-md font-medium text-gray-700 hover:bg-gray-50"

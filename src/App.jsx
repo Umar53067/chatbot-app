@@ -14,6 +14,7 @@ function App() {
     <Routes>
       <Route path="/chatbot" element={<Chatbot/>} />
       <Route path="/" element={<Login/>} />
+      <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />
     </Routes>
     </BrowserRouter>

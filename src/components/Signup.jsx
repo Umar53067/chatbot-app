@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -37,7 +37,7 @@ function Signup() {
     localStorage.setItem('users', JSON.stringify(users)); // Save updated data back to local storage
 
     // Redirect to the login page or any other desired page
-    window.location.href = '/login';
+    window.location.href = '/';
 
     // Optionally reset the form
     setFormData({
@@ -48,6 +48,12 @@ function Signup() {
       confirmPassword: '',
     });
   };
+  useEffect(() => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        window.location.href = '/chatbot';
+      }
+    }, [])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black">

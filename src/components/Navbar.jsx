@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-black text-white shadow-lg">
+    <nav className="bg-black text-white shadow-lg h-16">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="flex items-center">
@@ -36,7 +36,7 @@ function Navbar() {
             <Link to="/signup" className="hover:underline transition duration-200 bg-green-500 p-2 mx-2 rounded-lg">
               Signup
             </Link>
-            <Link to="/login" className="hover:underline transition duration-200 bg-blue-500 p-2 mx-2 rounded-lg">
+            <Link to="/" className="hover:underline transition duration-200 bg-blue-500 p-2 mx-2 rounded-lg">
               Login
             </Link>
           </div>
